@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # This script is managing manage_my_process
+
 start() {
 	./manage_my_process &
 	echo $$ >/var/run/my_process.pid
