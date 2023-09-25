@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installs, configures & starts the server
+
+sudo apt-get -y update
+sudo apt-get install -y nginx
+
+sudo sh -c 'echo "Hello World!" > var/www/html/index.html'
+
+sudo nginx -s reload
