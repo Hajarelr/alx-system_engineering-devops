@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install and configure HAproxy on my Ib-01 server
 
+
 # colors
 blue='\e[1;34m'
 brown='\e[0;33m'
