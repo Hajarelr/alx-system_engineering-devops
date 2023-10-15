@@ -1,0 +1,34 @@
+STEP 0 — URL PARSING
+At their core, web browsers are simple. They function entirely to take a string of text and return the web page that corresponds with it — nothing more, nothing less. Of course, a web browser can only complete this function if it knows what a given string of text it receives is.
+Web browsers function on Internet Protocol (IP) addresses (think of them as the addresses of servers). It is possible to give web browsers exact IP addresses to access websites — in fact, this would save the browser quite a bit of work — however, we humans have a difficult time remembering 4–12+ digit strings of numbers, let alone the dozens upon dozens of them we frequent every day.
+
+
+
+STEP 1 — DNS LOOKUP
+Having failed to match the received hostname in either its own or the operating system’s cache, Firefox sends it off to the nearest resolver server (typically your Internet Service Provider) to be resolved into its IP through the Domain Name System.
+
+STEP 2 — TCP/IP
+Finally, our web browser is ready to go. Having resolved the IP address associated with 
+www.google.com, Firefox proceeds to begin communication with the corresponding server.
+The communication between the browser and server occurs over what is referred to as Transmission Control Protocol/Internet Protocol (TCP/IP).
+STEP 3 — SSL
+The browser knows the IP address of the server it wants to communicate with and the method of going about that communication, but before going all willy-nilly and striking up a nice conversation out in the open, it first undergoes a security check.
+d responds with a certificate, a security approval including the server’s TLS public key. Back at the client-side, the browser uses this public key to encrypt a pre-master key.
+
+STEP 4 — HTTPS
+Recall that HTTPS initially came up as the first block parsed from our URL, and represents the protocol of our website request. 
+
+STEP 5 — LOAD BALANCER
+
+To introduce the importance of load balancing, realize that over four billlion people use the internet today. Think about the number of HTTP GET requests sent to a particular website every day, every hour, every minute, and every second,
+
+
+STEP 6 — FIREWALL
+
+Firewalls are hardware, software, or an implementation of both that filter all traffic coming into and out of a server. TLS is effective for preventing data from being intercepted mid-transmission. Yet, it assumes that received data is coming from a trusted source. 
+
+
+STEP 7 — Host Server
+
+Resolved into its IP, transferred over TCP/IP, encrypted by TLS, formatted as HTTP, passed by a firewall, (*huff, huff*) distributed by a load balancer, and passed through another firewall, our initial URL has been received as a HTTP GET request by a server hosting our desired web page.
+
